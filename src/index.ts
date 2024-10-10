@@ -8,7 +8,6 @@ export const generateName = async () => {
         const fNameIndex = Math.floor(Math.random() * 5008);
         const lNameIndex = Math.floor(Math.random() * 150);
         const path = resolve(__dirname,"../names.txt")
-        console.log(path)
         const data = await readFileAsync(path, 'utf-8');
         if (data) {
             const Data = JSON.parse(data);
