@@ -45,7 +45,8 @@ const generateName = () => __awaiter(void 0, void 0, void 0, function* () {
         const data = yield readFileAsync(pathForName, 'utf-8');
         if (data) {
             const Data = JSON.parse(data);
-            return Data[0][fNameIndex] + "_" + Data[1][lNameIndex] + "_" + Math.floor(Math.random() * 10000);
+            const str = Data[0][fNameIndex] + "_" + Data[1][lNameIndex] + "_" + Math.floor(Math.random() * 10000);
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
         }
     }
     catch (err) {

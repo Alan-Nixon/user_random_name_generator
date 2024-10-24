@@ -1,6 +1,6 @@
 {
   "name": "user_random_name_generator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A utility package for generating random user names",
   "main": "dist/index.js",
   "scripts": {
